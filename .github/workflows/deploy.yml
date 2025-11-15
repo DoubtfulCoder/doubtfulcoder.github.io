@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, website-redesign ]
   workflow_dispatch:
 
 permissions:
@@ -32,6 +32,11 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Add SPA fallback and disable Jekyll
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
