@@ -11,7 +11,7 @@
         {
           "name": "Sentry Error Monitoring Dashboard",
           "description": "Implemented error tracking with Sentry of 3000+ weekly exceptions from client devices using Java Spring Boot + React.js analytics dashboard to aggregate logs with internal data for faster debugging. Also used Gemini for error analysis and triaging.",
-          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+          "image": "work-images/sentry-dashboard.png",
           "tech": [
             "TypeScript", "React", "Java Spring Boot",
             "Google Cloud", "Docker", "Sentry", "Gemini"
@@ -20,16 +20,25 @@
         {
           "name": "BlueFletch Chat App",
           "description": "Worked on Bluefletch Chat App in Java/Kotlin on features such as voice transcription.",
-          "image": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=500&fit=crop",
-          "tech": ["Java", "Kotlin", "Google Cloud", "Jetpack Compose"]
+          "image": "work-images/bf-chat.png",
+          "tech": ["Java", "Kotlin", "Google Cloud", "Jetpack Compose", "Android Studio"]
         },
         {
           "name": "AI SQL Event Explorer Assistant",
           "description": "Extended the company's Enterprise Portal (React/Express) with an AI-powered SQL assistant (Gemini), enabling non-technical staff and clients to generate BigQuery SQL database queries more efficiently using an event explorer.",
-          "image": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=500&fit=crop",
+          "image": "work-images/ai-sql-assistant.png",
           "tech": [
             "JavaScript", "React", "Express", "Google Cloud", 
             "SQL", "Gemini", "BigQuery", "AI"
+          ]
+        },
+        {
+          "name": "Health Status Monitor",
+          "description": "Built a Google Cloud-based infrastructure monitoring platform with a JavaScript React frontend, Node.js + Express backend, and Docker, alerting customer success teams of downtime of key services.",
+          "image": "work-images/health-status-monitor.png",
+          "tech": [
+            "JavaScript", "React", "Node.js", "Express",
+            "Google Cloud", "Docker"
           ]
         }
       ]
@@ -45,7 +54,7 @@
         {
           "name": "LiDAR-based Autonomous Robotic Mapping",
           "description": "Designed and implemented a LiDAR-based robotic mapping algorithm in Python and ROS2 to enhance autonomous navigation. Built mapping pipelines leveraging Quadtrees for spatial data representation and applied graph search algorithms (Breadth-First Search and Depth-First Search) for optimized pathfinding.",
-          "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=500&fit=crop",
+          "image": "work-images/autonomous-mapping.png",
           "tech": [
             "Python", "ROS2", "LiDAR", "Matplotlib",
             "Numpy", "Gazebo", "Graph Search Algorithms",
@@ -65,7 +74,7 @@
         {
           "name": "Resume Parsing System",
           "description": "Contributed to the NLP/Document AI team, training machine learning models to extract structured data from resumes. Fine-tuned LayoutLM, LiLT, and BERT models in Python (PyTorch/HuggingFace) for layout and text understanding, achieving up to 90% accuracy on a dataset of over 900 labeled resumes.",
-          "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=500&fit=crop",
+          "image": "work-images/resume-parser.png",
           "tech": [
             "Python", "PyTorch", "HuggingFace",
             "Transformers", "NLP", "Document AI",
