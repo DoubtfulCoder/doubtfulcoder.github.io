@@ -5,7 +5,7 @@
       "name": "statuspulse.io",
       "description": "Co-founder of statuspulse.io, a status monitoring website (4000+ services). Built with React and Flask and deployed on AWS (ECS Fargate + Lambda).",
       "image": "learnfp.png",
-      "tech": ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind"],
+      "tech": ["Python", "TypeScript", "Flask", "React", "AWS", "Docker", "ECS Fargate", "Lambda"],
       "demoUrl": "https://statuspulse.io",
       "featured": true
     },
@@ -14,7 +14,7 @@
       "name": "LearnFP",
       "description": "A website to teach functional programming concepts through courses and exercises. Made with JavaScript, Gatsby.js, and Firebase.",
       "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=500&fit=crop",
-      "tech": ["Next.js", "TypeScript", "OpenAI", "Prisma", "tRPC"],
+      "tech": ["JavaScript", "Gatsby.js", "Firebase", "CSS", "Bootstrap", "GraphQL"],
       "githubUrl": "https://github.com/DoubtfulCoder/learn-fp",
       "demoUrl": "https://learnfp.org",
       "featured": true
@@ -24,7 +24,7 @@
       "name": "Photo Chess",
       "description": "Mobile app that uses a trained Tensorflow Lite model and OpenCV to recognize physical chess pieces and positions and converts to a playable board.",
       "image": "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=500&fit=crop",
-      "tech": ["React", "Socket.io", "Express", "MongoDB", "Redis"],
+      "tech": ["Kotlin", "Python", "Tensorflow Lite", "OpenCV", "Android Studio", "Machine Learning"],
       "githubUrl": "https://github.com/DoubtfulCoder/Photo-Chess-Technology-Fair",
       "featured": true
     },
@@ -33,7 +33,7 @@
       "name": "Fantasy Basketball Predictor",
       "description": "Trained machine learning models such as Random Forest and Ridge Regression to predict NBA player fantasy points.",
       "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=500&fit=crop",
-      "tech": ["React Native", "Expo", "Supabase", "Recharts"],
+      "tech": ["Python", "Machine Learning", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib"],
       "demoUrl": "#",
       "featured": true
     },
@@ -42,7 +42,7 @@
       "name": "Chess AI",
       "description": "Chess AI using Minimax algorithm with alpha-beta pruning, multi-threading, MVV-LVA, and quiescence search.",
       "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      "tech": ["Vue.js", "Python", "Docker", "Kubernetes", "Grafana"],
+      "tech": ["AI", "JavaScript", "Minimax", "Alpha-Beta Pruning", "Algorithms"],
       "githubUrl": "https://github.com/DoubtfulCoder/chess-ai",
       "demoUrl": "https://doubtfulcoder.github.io/chess-ai",
       "featured": true
