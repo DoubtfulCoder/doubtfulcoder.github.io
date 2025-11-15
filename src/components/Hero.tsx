@@ -21,7 +21,7 @@ const Hero = () => {
 
           <div className="flex gap-4 items-center pt-2">
             <a 
-              href="https://github.com" 
+              href="https://github.com/DoubtfulCoder" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -29,7 +29,7 @@ const Hero = () => {
               <Github className="h-5 w-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/naveed-kabir/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -37,7 +37,7 @@ const Hero = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:naveedtkabir@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="h-5 w-5" />

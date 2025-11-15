@@ -1,113 +1,135 @@
-// Tech stack color mapping with predefined colors
-const techColors: Record<string, string> = {
-  // Frontend Frameworks
-  React: "bg-blue-500",
-  "Next.js": "bg-black",
-  "Vue.js": "bg-green-500",
-  Angular: "bg-red-600",
-  Svelte: "bg-orange-500",
-  
-  // Languages
-  JavaScript: "bg-yellow-500",
-  TypeScript: "bg-blue-600",
-  Python: "bg-yellow-500",
-  Java: "bg-red-700",
-  "C#": "bg-purple-700",
-  Go: "bg-blue-400",
-  Rust: "bg-orange-600",
-  PHP: "bg-indigo-600",
-  
-  // Mobile
-  "React Native": "bg-blue-500",
-  Flutter: "bg-blue-400",
-  Expo: "bg-gray-800",
-  iOS: "bg-gray-600",
-  Android: "bg-green-600",
-  
-  // Backend & APIs
-  "Node.js": "bg-green-600",
-  Express: "bg-gray-600",
-  Django: "bg-green-700",
-  FastAPI: "bg-teal-500",
-  Laravel: "bg-red-500",
-  Rails: "bg-red-600",
-  
-  // Databases
-  PostgreSQL: "bg-blue-700",
-  MongoDB: "bg-green-600",
-  MySQL: "bg-blue-600",
-  Redis: "bg-red-600",
-  SQLite: "bg-blue-500",
-  Supabase: "bg-green-500",
-  Firebase: "bg-yellow-500",
-  
-  // Cloud & DevOps
-  AWS: "bg-orange-500",
-  Docker: "bg-blue-600",
-  Kubernetes: "bg-blue-700",
-  Vercel: "bg-black",
-  Netlify: "bg-teal-600",
-  Heroku: "bg-purple-600",
-  
-  // Styling
-  Tailwind: "bg-cyan-500",
-  "Tailwind CSS": "bg-cyan-500",
-  "Material UI": "bg-blue-600",
-  "Styled Components": "bg-pink-500",
-  Sass: "bg-pink-600",
-  CSS: "bg-blue-400",
-  
-  // State Management & Data
-  Redux: "bg-purple-600",
-  Zustand: "bg-orange-400",
-  Prisma: "bg-indigo-600",
-  GraphQL: "bg-pink-600",
-  tRPC: "bg-blue-500",
-  
-  // AI/ML
-  OpenAI: "bg-emerald-500",
-  TensorFlow: "bg-orange-600",
-  PyTorch: "bg-red-500",
-  
-  // Tools & Services
-  Stripe: "bg-purple-600",
-  Sanity: "bg-red-500",
-  MDX: "bg-yellow-600",
-  "Socket.io": "bg-gray-700",
-  Grafana: "bg-orange-500",
-  Elasticsearch: "bg-yellow-600",
-  "Apache Kafka": "bg-gray-700",
-  Figma: "bg-purple-500",
-  Postman: "bg-orange-400",
-  
-  // APIs & Services
-  "OpenWeatherMap": "bg-orange-500",
-  "Spoonacular API": "bg-green-500",
-  Leaflet: "bg-green-600",
-  "Chart.js": "bg-purple-500",
-  Recharts: "bg-purple-500",
+// Category-based tech color system
+// All languages share one color. Other categories use one color per category.
+
+type Category =
+  | "Language"
+  | "Web"
+  | "Mobile"
+  | "Data & AI"
+  | "Cloud"
+  | "Dev Tools"
+  | "Default";
+
+// Tailwind background colors per category (update here to tweak palette)
+const categoryColors: Record<Category, string> = {
+  Language: "bg-amber-600",
+  Web: "bg-blue-600",
+  Mobile: "bg-emerald-600",
+  "Data & AI": "bg-violet-600",
+  Cloud: "bg-sky-600",
+  "Dev Tools": "bg-slate-600",
+  Default: "bg-zinc-600",
 };
 
-// Default colors for unknown techs
-const defaultColors = [
-  "bg-gray-500",
-  "bg-slate-500", 
-  "bg-zinc-500",
-  "bg-neutral-500",
-  "bg-stone-500",
-];
+// Normalize a tech label for matching (case-insensitive, trim, collapse dots)
+const norm = (s: string) => s.trim().toLowerCase();
 
+// Languages: one color across all
+const languages = new Set<string>([
+  // Core languages spotted across the repo
+  "javascript",
+  "typescript",
+  "python",
+  "java",
+  "kotlin",
+  "sql",
+  "html",
+  "css",
+  // A few common extras
+  "c#",
+  "go",
+  "rust",
+  "php",
+]);
+
+// Map known technologies to categories (normalized keys)
+const techToCategory: Record<string, Category> = {
+  // Web (frontend, backend, styling, web tooling)
+  "react": "Web",
+  "react.js": "Web",
+  "reactjs": "Web",
+  "express": "Web",
+  "node.js": "Web",
+  "nodejs": "Web",
+  "html": "Web",
+  "css": "Web",
+  "firebase": "Web",
+  "flask": "Web",
+  "gatsby": "Web",
+  "gatsby.js": "Web",
+  "bootstrap": "Web",
+  "tailwind": "Web",
+  "tailwind css": "Web",
+  "spring boot": "Web",
+  "java spring boot": "Web",
+  "redux": "Web",
+  "graphql": "Web",
+  "html canvas": "Web",
+
+  // Mobile
+  "android studio": "Mobile",
+  "react native": "Mobile",
+  "jetpack compose": "Mobile",
+  "hilt": "Mobile",
+  "tensorflow lite": "Mobile", // appears in a mobile app context
+
+  // Data & AI
+  "machine learning": "Data & AI",
+  "tensorflow": "Data & AI",
+  "pytorch": "Data & AI",
+  "numpy": "Data & AI",
+  "numPy": "Data & AI", // safeguard (will be normalized anyway)
+  "pandas": "Data & AI",
+  "scikit-learn": "Data & AI",
+  "scikit learn": "Data & AI",
+  "nlp": "Data & AI",
+  "llms": "Data & AI",
+  "matplotlib": "Data & AI",
+  "seaborn": "Data & AI",
+  "huggingface": "Data & AI",
+  "hugging face": "Data & AI",
+  "opencv": "Data & AI",
+  "ai": "Data & AI",
+  "transformers": "Data & AI",
+  "bert": "Data & AI",
+  "layoutlm": "Data & AI",
+  "document ai": "Data & AI",
+  "gemini": "Data & AI",
+
+  // Cloud
+  "google cloud": "Cloud",
+  "gcp": "Cloud",
+  "aws": "Cloud",
+  "ecs fargate": "Cloud",
+  "fargate": "Cloud",
+  "lambda": "Cloud",
+  "bigquery": "Cloud",
+
+  // Dev Tools (platforms, infra, dbs, tooling)
+  "git": "Dev Tools",
+  "linux": "Dev Tools",
+  "docker": "Dev Tools",
+  "postgresql": "Dev Tools",
+  "postgres": "Dev Tools",
+  "jira": "Dev Tools",
+  "sentry": "Dev Tools",
+};
+
+// Determine the category for a given tech name
+export const getTechCategory = (techName: string): Category => {
+  const key = norm(techName);
+
+  // Languages take precedence regardless of other mappings
+  if (languages.has(key)) return "Language";
+
+  // TensorFlow Lite: treat specifically as Data & AI if not used in Mobile list
+  if (key === "tensorflow lite") return "Data & AI";
+
+  return techToCategory[key] ?? "Default";
+};
+
+// Public API used by components: returns a Tailwind background color class
 export const getTechColor = (techName: string): string => {
-  // Return predefined color if exists
-  if (techColors[techName]) {
-    return techColors[techName];
-  }
-  
-  // Generate consistent color for unknown tech using hash
-  const hash = techName.split('').reduce((acc, char) => {
-    return char.charCodeAt(0) + ((acc << 5) - acc);
-  }, 0);
-  
-  const colorIndex = Math.abs(hash) % defaultColors.length;
-  return defaultColors[colorIndex];
+  const category = getTechCategory(techName);
+  return categoryColors[category] ?? categoryColors.Default;
 };
